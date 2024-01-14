@@ -1,5 +1,15 @@
 function Home() {
-  return <h1>Focar no processo sempre</h1>;
+  return (
+    <div style={
+      margin
+    }>
+      <h1>Marcos Vinicius</h1>
+
+      <section>
+        <p>Focar no processo sempre</p>
+      </section>
+    </div>
+  );
 }
 
 export default Home;
