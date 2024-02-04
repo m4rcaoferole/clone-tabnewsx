@@ -1,8 +1,6 @@
 function Home() {
   return (
-    <div style={
-      margin
-    }>
+    <div>
       <h1>Marcos Vinicius</h1>
 
       <section>
