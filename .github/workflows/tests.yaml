@@ -11,7 +11,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-versions: "lts/hydrogen"
+          node-version: "lts/hydrogen"
       
       - run: npm ci
 
