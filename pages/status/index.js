@@ -3,8 +3,7 @@ import useSWR from "swr";
 async function fetchAPI(key) {
   const response = await fetch(key);
   const responseBody = await response.json();
-  console.log(responseBody)
-  return responseBody
+  return responseBody;
 }
 
 function UpdateAt() {
@@ -24,17 +23,16 @@ function UpdateAt() {
   }
 
   return (
-    <div >
+    <div>
       <h4>Última atualização: {updateAtText}</h4>
       <div>Conexões Maximas: {max_connections}</div>
       <div>Conexões Abertas: {opened_connections}</div>
       <div>Versão: {version}</div>
     </div>
-  )
+  );
 }
 
 export default function StatesPage() {
-
   return (
     <>
       <div>
@@ -44,5 +42,5 @@ export default function StatesPage() {
         </div>
       </div>
     </>
-  )
+  );
 }
