@@ -11,7 +11,7 @@ exports.up = (pgm) => {
       notNull: true, // Have to defined values
       unique: true,
     },
-    
+
     user_id: {
       type: "uuid",
       notNull: true,
@@ -29,7 +29,7 @@ exports.up = (pgm) => {
       type: "timestamptz",
       notNull: true,
     },
-    
+
     update_at: {
       type: "timestamptz",
       default: pgm.func("timezone('utc', now())"),

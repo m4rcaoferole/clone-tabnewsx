@@ -41,7 +41,7 @@ describe("POST /api/v1/sessions", () => {
 
     test("With correct `email` but incorrect `password`", async () => {
       await orchestrator.createUser({
-        email: "email.correto@gmail.com"
+        email: "email.correto@gmail.com",
       });
 
       const response = await fetch("http://localhost:3000/api/v1/sessions", {
@@ -93,7 +93,7 @@ describe("POST /api/v1/sessions", () => {
       });
     });
 
-   test("With correct `email` and correct `password`", async () => {
+    test("With correct `email` and correct `password`", async () => {
       const createUser = await orchestrator.createUser({
         email: "tudo.correto@gmail.com",
         password: "tudo-correto",
@@ -106,7 +106,7 @@ describe("POST /api/v1/sessions", () => {
         },
         body: JSON.stringify({
           email: "tudo.correto@gmail.com",
-        password: "tudo-correto",
+          password: "tudo-correto",
         }),
       });
 
@@ -135,7 +135,7 @@ describe("POST /api/v1/sessions", () => {
       createdAt.setMilliseconds(0);
 
       expect(expiresAt - createdAt).toBe(session.EXPIRATION_IN_MILLISECONDS);
-      
+
       const parsedSetCookie = setCookieParser(response, {
         map: true,
       });

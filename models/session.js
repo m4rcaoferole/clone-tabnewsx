@@ -1,7 +1,7 @@
 import database from "infra/database.js";
 import crypto from "node:crypto";
 
-const EXPIRATION_IN_MILLISECONDS = 60 * 60 * 24 * 30 * 1000; // 30 Days  
+const EXPIRATION_IN_MILLISECONDS = 60 * 60 * 24 * 30 * 1000; // 30 Days
 
 async function create(userId) {
   const token = crypto.randomBytes(48).toString("hex");
@@ -30,6 +30,6 @@ async function create(userId) {
 const session = {
   create,
   EXPIRATION_IN_MILLISECONDS,
-}
+};
 
 export default session;
